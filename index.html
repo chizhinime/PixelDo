@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelDo - Cute To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pixel-container">
+        <div class="pixel-frame">
+            <header class="pixel-header">
+                <div class="header-content">
+                    <h1><i class="fas fa-check-double pixel-icon"></i> PixelDo</h1>
+                    <div class="header-controls">
+                        <button id="theme-toggle" class="pixel-button pixel-icon-btn">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="pixel-corners">
+                    <div class="corner top-left"></div>
+                    <div class="corner top-right"></div>
+                </div>
+            </header>
+
+            <main class="pixel-content">
+                <div class="pixel-screen">
+                    <div class="add-task">
+                        <input type="text" id="task-input" placeholder="What needs doing?" class="pixel-input">
+                        <button id="add-task-btn" class="pixel-button pixel-icon-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="task-filters">
+                        <button class="pixel-button filter-btn active" data-filter="all">
+                            <i class="fas fa-list"></i> All
+                        </button>
+                        <button class="pixel-button filter-btn" data-filter="active">
+                            <i class="fas fa-spinner"></i> Active
+                        </button>
+                        <button class="pixel-button filter-btn" data-filter="completed">
+                            <i class="fas fa-check-circle"></i> Done
+                        </button>
+                    </div>
+
+                    <ul id="task-list" class="pixel-list"></ul>
+
+                    <div class="task-stats">
+                        <span id="tasks-left">0 tasks waiting</span>
+                        <button id="clear-completed" class="pixel-button">
+                            <i class="fas fa-broom"></i> Clean Up
+                        </button>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="pixel-footer">
+                <div class="footer-content">
+                    <p><i class="fas fa-arrows-alt pixel-icon"></i> Drag to reorder</p>
+                    <div class="pixel-corners">
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        <div class="pixel-decoration">
+            <div class="decoration pixel-plant"></div>
+            <div class="decoration pixel-cat"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
